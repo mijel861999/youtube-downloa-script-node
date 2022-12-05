@@ -8,11 +8,10 @@ const ytdl = require('ytdl-core');
 	//
 
 const link = prompt("Ingresa el enlace del video: ");
-
+const name = prompt("Ingresa el nombre que quieres que tenga el video: ");
 console.log("El enlace es: " + link)
 
 ytdl(link)
-  .pipe(fs.createWriteStream('/home/mijel/Descargas/video1.mp4'));
-
+  .pipe(fs.createWriteStream('/home/mijel/Descargas/' + name + '.mp4'))
 
 console.log("Video descargado")
